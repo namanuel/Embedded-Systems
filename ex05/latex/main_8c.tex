@@ -1,0 +1,51 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include $<$util/twi.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}twi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debounce.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a8b8426d5c8d4a02dc1b15353d4bc613d}\label{main_8c_a8b8426d5c8d4a02dc1b15353d4bc613d}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N1}~(1$<$$<$P\+D5)
+\item 
+\mbox{\Hypertarget{main_8c_acad5ba277242dbcd68edaff5f550f29e}\label{main_8c_acad5ba277242dbcd68edaff5f550f29e}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N2}~(1$<$$<$P\+D6)
+\item 
+\mbox{\Hypertarget{main_8c_a64f0a5235b4b24fb04f54fb437011c75}\label{main_8c_a64f0a5235b4b24fb04f54fb437011c75}} 
+\#define {\bfseries B\+U\+T\+T\+O\+N3}~(1$<$$<$P\+D7)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+\+: Manuel Nagel
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+\+: 30-\/10-\/2018 \+: Ferdi Cecik 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item D\+D\+R\+D-\/\+Register als Eingang setzen (P\+D5,P\+D6,P\+D7)
+\item A\+Ktivierten Pull-\/up Widerstand für die Eingänge
+\end{DoxyItemize}

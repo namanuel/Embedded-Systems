@@ -89,7 +89,7 @@ uint8_t EEWriteByte(uint16_t u16addr, uint8_t u8data){
   TWI_start();
 
   TWI_write(EEDEVADR_write);
-  TWI_write(u16addr >> 8) //Speicheradresse-High Byte
+  TWI_write(u16addr >> 8); //Speicheradresse-High Byte
   TWI_write(u16addr);     //Speicheradresse-Low Byte
   TWI_write(u8data);
 

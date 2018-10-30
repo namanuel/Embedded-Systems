@@ -27,7 +27,7 @@ char debounce1(void){
 
     _delay_ms(10);
     EEWriteByte(counter,2); //Adresse 0, Wert 1 schreiben
-    -_delay_ms(10);
+    _delay_ms(10);
     counter++;
   }
   return rw;
@@ -51,12 +51,12 @@ char debounce2(void){
 
     _delay_ms(10);
     EEWriteByte(counter,1); //Adresse 0, Wert 1 schreiben
-    -_delay_ms(10);
+    _delay_ms(10);
     counter++;
   }
   return rw;
 }
-char debounce1(void){
+char debounce3(void){
   static unsigned char zustand;
   char rw = 0;
 
@@ -75,7 +75,8 @@ char debounce1(void){
 
     _delay_ms(10);
     EEWriteByte(counter,2); //Adresse 0, Wert 1 schreiben
-    -_delay_ms(10);
+    _delay_ms(10);
     counter++;
   }
+  return rw;
 }

@@ -12,11 +12,13 @@
 #include <util/twi.h>
 #include "uart.h"
 #include "twi.h"
+#include "debounce.h"
 
 #define BUTTON1 (1<<PD5)
 #define BUTTON2 (1<<PD6)
 #define BUTTON3 (1<<PD7)
 
+static int counter = 0;
 
 int main(){
 	/*!
@@ -28,12 +30,12 @@ int main(){
 
 	uart_init(115200);
 	TWI_init();
-
+	int i;
 	//Button ausgabe
-	for(int i = 0; i<5; i++){
+	for(i = 0; i<5; i++){
 		uint8_t character;
 		EEReadByte(i,&character);
-		uart_sendstring("\n\r Button ");
+		uart_send_string("\n\rButton ");
 		uart_transmit(character + '0');
 	}
 	while (1){
@@ -45,4 +47,3 @@ int main(){
 	}
 
 }
---
