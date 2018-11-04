@@ -2865,7 +2865,7 @@ char debounce1(void){
     rw = 0;
 
     _delay_ms(10);
-    EEWriteByte(counter,1);
+    EEWriteByte(counter,0);
     _delay_ms(10);
     counter++;
   }
@@ -2889,7 +2889,7 @@ char debounce2(void){
     rw = 0;
 
     _delay_ms(10);
-    EEWriteByte(counter,2);
+    EEWriteByte(counter,1);
     _delay_ms(10);
     counter++;
   }
@@ -2901,7 +2901,7 @@ char debounce3(void){
 
   if(zustand == 0 && !((*(volatile uint8_t *)((0x09) + 0x20)) & (1<<7))){
     zustand = 1;
-    rw = 1;
+    rw = 2;
   }else if(zustand == 1 && !((*(volatile uint8_t *)((0x09) + 0x20)) & (1<<7))){
     zustand = 2;
     rw = 0;
@@ -2913,7 +2913,7 @@ char debounce3(void){
     rw = 0;
 
     _delay_ms(10);
-    EEWriteByte(counter,3);
+    EEWriteByte(counter,2);
     _delay_ms(10);
     counter++;
   }

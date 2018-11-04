@@ -185,7 +185,7 @@ debounce1:
 .Ltext2:
 	.stabn	68,0,29,.LM15-.LFBB1
 .LM15:
-	ldi r22,lo8(1)
+	ldi r22,0
 	lds r24,counter
 	lds r25,counter+1
 	call EEWriteByte
@@ -313,7 +313,7 @@ debounce2:
 .Ltext6:
 	.stabn	68,0,53,.LM35-.LFBB2
 .LM35:
-	ldi r22,lo8(2)
+	ldi r22,lo8(1)
 	lds r24,counter
 	lds r25,counter+1
 	call EEWriteByte
@@ -382,6 +382,7 @@ debounce3:
 	sts zustand.1674,r24
 	.stabn	68,0,65,.LM44-.LFBB3
 .LM44:
+	ldi r24,lo8(2)
 	ret
 .L25:
 	.stabn	68,0,66,.LM45-.LFBB3
@@ -441,7 +442,7 @@ debounce3:
 .Ltext10:
 	.stabn	68,0,77,.LM55-.LFBB3
 .LM55:
-	ldi r22,lo8(3)
+	ldi r22,lo8(2)
 	lds r24,counter
 	lds r25,counter+1
 	call EEWriteByte

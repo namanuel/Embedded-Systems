@@ -26,7 +26,7 @@ char debounce1(void){
     rw = 0;
 
     _delay_ms(10);
-    EEWriteByte(counter,2); //Adresse 0, Wert 1 schreiben
+    EEWriteByte(counter,0); //Adresse 0, Wert 1 schreiben
     _delay_ms(10);
     counter++;
   }
@@ -62,7 +62,7 @@ char debounce3(void){
 
   if(zustand == 0 && !(PIND & BUTTON3)){//Taster gedrückt = steigende Flanke
     zustand = 1;
-    rw = 1;
+    rw = 2;
   }else if(zustand == 1 && !(PIND & BUTTON3)){ //Taster wird gehalten
     zustand = 2;
     rw = 0;
