@@ -6,7 +6,7 @@
 #define BUTTON2 (1<<PD6)
 #define BUTTON3 (1<<PD7)
 
-static int counter = 0;
+int counter = 0;
 
 char debounce1(void){
   static unsigned char zustand;
